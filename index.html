@@ -114,13 +114,13 @@ header.nav.stuck .brand img{height:46px}
 .brand .bs{display:flex;flex-direction:column;line-height:1.15}
 .brand .bs b{font-family:var(--fd);font-weight:700;font-size:21px;color:var(--ink);letter-spacing:.01em}
 .brand .bs small{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-ink);font-weight:700;margin-top:3px}
-.nav-links{display:flex;align-items:center;gap:30px}
-.nav-links a{font-size:14.5px;font-weight:500;color:var(--text);position:relative;padding-block:4px}
+.nav-links{display:flex;align-items:center;gap:26px;flex:none}
+.nav-links a{font-size:14.5px;font-weight:500;color:var(--text);position:relative;padding-block:4px;white-space:nowrap}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--accent);transition:width .35s var(--ease)}
 .nav-links a:hover{color:var(--ink)}
 .nav-links a:hover::after{width:100%}
 .nav-cta{display:flex;align-items:center;gap:16px}
-.nav-phone{display:inline-flex;align-items:center;gap:9px;font-weight:700;color:var(--ink);font-size:14.5px}
+.nav-phone{display:inline-flex;align-items:center;gap:9px;font-weight:700;color:var(--ink);font-size:14.5px;white-space:nowrap}
 .nav-phone svg{width:15px;height:15px;color:var(--accent)}
 .burger{display:none;width:44px;height:44px;border:1px solid var(--line);background:transparent;border-radius:2px;cursor:pointer;position:relative}
 .burger span{position:absolute;left:12px;right:12px;height:1.5px;background:var(--ink);transition:transform .35s var(--ease),opacity .25s}
