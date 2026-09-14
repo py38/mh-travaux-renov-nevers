@@ -55,7 +55,10 @@
     { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rénovation pour investissement locatif" } },
     { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rénovation énergétique" } },
     { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Aménagement intérieur et extérieur" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rénovation de bureaux, hôtels, boutiques et commerces" } }
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rénovation de bureaux, hôtels, boutiques et commerces" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Construction de maisons individuelles, extensions et bâtiments professionnels" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Toiture, charpente et remplacement des menuiseries" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Aménagements extérieurs : terrasses, pergolas, allées, clôtures et portails" } }
   ]
 }
 </script>
@@ -185,6 +188,17 @@ header.nav.stuck .brand img{height:46px}
 .svc-mini h4{font-size:16px}
 .svc-mini p{font-size:13.5px;color:var(--muted);margin-top:7px}
 
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,44px)}
+.col{border-top:1px solid var(--line);padding-top:26px}
+.col h3{font-size:17px;letter-spacing:-.01em}
+.col ul{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:12px}
+.col li{position:relative;padding-left:20px;font-size:15px;color:var(--text)}
+.col li::before{content:"";position:absolute;left:0;top:10px;width:8px;height:1px;background:var(--accent)}
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:38px 0 6px;text-align:left}
+.q{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:28px 26px}
+.q blockquote{margin:0;font-size:15.5px;color:var(--text);line-height:1.7}
+.q figcaption{margin-top:18px;font-size:13.5px;font-weight:800;color:var(--ink);letter-spacing:-.01em}
+.q figcaption span{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-top:5px}
 .ba-in{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,5vw,64px);align-items:center}
 .ba{position:relative;border-radius:3px;overflow:hidden;box-shadow:var(--shadow);user-select:none;touch-action:pan-y;cursor:ew-resize}
 .ba img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover;pointer-events:none}
@@ -325,6 +339,8 @@ footer p.d{font-size:14.5px;max-width:38ch;margin-top:20px;color:rgba(255,255,25
 
 @media (max-width:1000px){
   .about,.zone-in,.contact,.ba-in{grid-template-columns:1fr;gap:38px}
+  .cols{grid-template-columns:1fr}
+  .quotes{grid-template-columns:1fr}
   .why-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
   .step{padding-right:24px}
@@ -369,7 +385,7 @@ footer p.d{font-size:14.5px;max-width:38ch;margin-top:20px;color:rgba(255,255,25
     </a>
     <nav class="nav-links" aria-label="Navigation">
       <a href="#savoir-faire">Savoir-faire</a>
-      <a href="#avant-apres">Avant / après</a>
+      <a href="#detail">Prestations</a>
       <a href="#realisations">Réalisations</a>
       <a href="#methode">Méthode</a>
       <a href="#contact">Contact</a>
@@ -384,6 +400,7 @@ footer p.d{font-size:14.5px;max-width:38ch;margin-top:20px;color:rgba(255,255,25
 
 <nav class="mobnav" id="mobnav" aria-label="Menu mobile">
   <a href="#savoir-faire">Savoir-faire</a>
+  <a href="#detail">Prestations</a>
   <a href="#avant-apres">Avant / après</a>
   <a href="#realisations">Réalisations</a>
   <a href="#methode">Méthode</a>
@@ -476,6 +493,44 @@ footer p.d{font-size:14.5px;max-width:38ch;margin-top:20px;color:rgba(255,255,25
       <div class="svc-mini rv d1"><div class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 20h18M5 20V9h6v11M13 20V4h6v16"/></svg></div><h4>Bureaux &amp; commerces</h4><p>Rénovation ou création de bureaux, boutiques et hôtels.</p></div>
       <div class="svc-mini rv d2"><div class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 21V9l8-6 8 6v12"/><path d="M4 13h16"/></svg></div><h4>Construction</h4><p>Maisons individuelles, extensions et bâtiments professionnels.</p></div>
       <div class="svc-mini rv d3"><div class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div><h4>Étude &amp; devis</h4><p>Estimation et faisabilité, avant même votre achat.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="detail" style="background:var(--bg-2)">
+  <div class="wrap">
+    <div class="sh rv">
+      <span class="eyebrow">Dans le détail</span>
+      <h2>Ce que nous prenons en charge.</h2>
+      <p>Du gros œuvre aux finitions, voici concrètement les travaux que nous réalisons sur vos chantiers.</p>
+    </div>
+    <div class="cols">
+      <div class="col rv">
+        <h3>Construction</h3>
+        <ul>
+          <li>Maisons individuelles neuves, de la conception à la remise des clés</li>
+          <li>Extensions et agrandissements</li>
+          <li>Bâtiments professionnels : ateliers, bureaux, commerces, entrepôts</li>
+        </ul>
+      </div>
+      <div class="col rv d1">
+        <h3>Rénovation intérieure</h3>
+        <ul>
+          <li>Création de cuisine et de salle de bain</li>
+          <li>Sols, peinture et plâtrerie</li>
+          <li>Reprise de l'électricité et de la plomberie</li>
+          <li>Redistribution des volumes et mise aux normes</li>
+        </ul>
+      </div>
+      <div class="col rv d2">
+        <h3>Extérieur &amp; énergie</h3>
+        <ul>
+          <li>Façades et isolation thermique</li>
+          <li>Toiture et charpente</li>
+          <li>Fenêtres, volets, double et triple vitrage</li>
+          <li>Terrasses, pergolas, allées, clôtures et portails</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -583,10 +638,19 @@ footer p.d{font-size:14.5px;max-width:38ch;margin-top:20px;color:rgba(255,255,25
 <section class="section" style="background:var(--bg-2)">
   <div class="wrap">
     <div class="avis rv">
-      <div class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
-      <div class="rate">Votre retour compte beaucoup pour une entreprise locale.</div>
-      <h2>Votre avis fait avancer notre travail.</h2>
-      <p>Vous nous avez confié un chantier ? Partagez votre expérience : cela aide les prochains propriétaires et investisseurs à nous faire confiance.</p>
+      <span class="eyebrow" style="justify-content:center">Ils nous ont fait confiance</span>
+      <h2>Ce que disent nos clients.</h2>
+      <div class="quotes">
+        <figure class="q">
+          <blockquote>« Je conseillerais à mes amis cette entreprise là parce que franchement ils font de belles choses et j'apprécie leur boulot. »</blockquote>
+          <figcaption>Eric Dadou<span>Entrepreneur</span></figcaption>
+        </figure>
+        <figure class="q">
+          <blockquote>« MH Travaux Rénov est vraiment une excellente société de rénovation. Travail très soigné sur des chantiers toujours entretenus, et c'est très agréable. Je recommande vivement. »</blockquote>
+          <figcaption>Makki Belattar<span>Designer</span></figcaption>
+        </figure>
+      </div>
+      <p>Vous nous avez confié un chantier&nbsp;? Partagez votre expérience : cela aide les prochains propriétaires et investisseurs à nous faire confiance.</p>
       <button class="btn btn-primary btn-lg" type="button" onclick="openRev()">Laisser un avis</button>
     </div>
   </div>
